@@ -129,7 +129,7 @@ func (p *TSaslTransport) sendSaslMsg(ctx context.Context, status uint8, body []b
 		return err
 	}
 
-	err = p.tp.Flush(ctx)
+	err = p.tp.Flush()
 	if err != nil {
 		return err
 	}
@@ -217,7 +217,7 @@ func (p *TSaslTransport) Write(buf []byte) (int, error) {
 }
 
 // Flush the bytes in the buffer
-func (p *TSaslTransport) Flush(ctx context.Context) (err error) {
+func (p *TSaslTransport) Flush() (err error) {
 	wrappedBuf, err := p.saslClient.Encode(p.writeBuf.Bytes())
 	if err != nil {
 		return thrift.NewTTransportExceptionFromError(err)
@@ -239,7 +239,7 @@ func (p *TSaslTransport) Flush(ctx context.Context) (err error) {
 			return thrift.NewTTransportExceptionFromError(err)
 		}
 	}
-	err = p.tp.Flush(ctx)
+	err = p.tp.Flush()
 	return thrift.NewTTransportExceptionFromError(err)
 }
 
