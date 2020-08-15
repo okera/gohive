@@ -1,5 +1,5 @@
 # GoHive
-[![Build Status](https://travis-ci.org/beltran/gohive.svg?branch=master)](https://travis-ci.org/beltran/gohive) [![Coverage Status](https://coveralls.io/repos/github/beltran/gohive/badge.svg?branch=master)](https://coveralls.io/github/beltran/gohive?branch=master)
+[![Build Status](https://travis-ci.org/okera/gohive.svg?branch=master)](https://travis-ci.org/okera/gohive) [![Coverage Status](https://coveralls.io/repos/github/okera/gohive/badge.svg?branch=master)](https://coveralls.io/github/okera/gohive?branch=master)
 
 
 GoHive is a driver for Hive in go that supports connection mechanisms KERBEROS(Gssapi Sasl), NONE(Plain Sasl), LDAP, CUSTOM and NOSASL, both for binary and http transport, with and without SSL. The kerberos mechanism will pick a different authentication level depending on `hive.server2.thrift.sasl.qop`.
@@ -7,7 +7,7 @@ GoHive is a driver for Hive in go that supports connection mechanisms KERBEROS(G
 ## Installation
 Gohive can be installed with:
 ```
-go get github.com/beltran/gohive
+go get github.com/okera/gohive
 ```
 
 To add kerberos support gohive requires header files to build against the GSSAPI C library. They can be installed with:
@@ -17,7 +17,7 @@ To add kerberos support gohive requires header files to build against the GSSAPI
 
 Then:
 ```
-go get -tags kerberos github.com/beltran/gohive
+go get -tags kerberos github.com/okera/gohive
 ```
 
 ## Quickstart
