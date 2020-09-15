@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/apache/thrift/lib/go/thrift"
+	"github.com/cerebro-data/thrift/lib/go/thrift"
 	"github.com/beltran/gosasl"
 )
 

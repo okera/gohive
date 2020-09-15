@@ -14,7 +14,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/apache/thrift/lib/go/thrift"
+	"github.com/cerebro-data/thrift/lib/go/thrift"
 	"github.com/okera/gohive/hiveserver"
 	"github.com/beltran/gosasl"
 	"github.com/go-zookeeper/zk"
